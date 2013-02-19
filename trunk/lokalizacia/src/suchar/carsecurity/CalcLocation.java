@@ -53,6 +53,9 @@ public class CalcLocation {
 	 * @return distance in meters
 	 */
 	public static double distance( Location a, Location b ){
+		if( (a == null) || (b == null) )
+			return 0;
+		
 		final double earthR = 6371000; // meters
 		double dLat = toRadians(b.getLatitude()-a.getLatitude());
 		double dLon = toRadians(b.getLongitude()-a.getLongitude());
