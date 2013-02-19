@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/TextView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="5dip"
+            android:layout_weight="2.15"
+            android:text="Phone No:"
+            android:textSize="20dip" />
+
+        <EditText
+            android:id="@+id/editTextPhoneNo"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:phoneNumber="true"
+            android:text="5554" >
+
+            <requestFocus />
+        </EditText>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dip"
+        android:layout_weight="1"
         android:orientation="horizontal" >
 
         <TextView
@@ -18,16 +47,14 @@
             android:layout_marginLeft="10dip"
             android:layout_marginRight="5dip"
             android:text="Latitude: "
-            android:textSize="20dip" >
-        </TextView>
+            android:textSize="20dip" />
 
         <TextView
             android:id="@+id/TextView02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="unknown"
-            android:textSize="20dip" >
-        </TextView>
+            android:textSize="20dip" />
     </LinearLayout>
 
     <LinearLayout
@@ -42,16 +69,36 @@
             android:layout_marginLeft="10dip"
             android:layout_marginRight="5dip"
             android:text="Longitute: "
-            android:textSize="20dip" >
-        </TextView>
+            android:textSize="20dip" />
 
         <TextView
             android:id="@+id/TextView04"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="unknown"
-            android:textSize="20dip" >
-        </TextView>
+            android:textSize="20dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout011"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/TextView09"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="5dip"
+            android:text="Altitude [m]"
+            android:textSize="20dip" />
+
+        <TextView
+            android:id="@+id/TextView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="unknown"
+            android:textSize="20dip" />
     </LinearLayout>
 
     <LinearLayout
@@ -74,14 +121,13 @@
             android:layout_height="wrap_content"
             android:text="not moving"
             android:textSize="20dip" />
-
     </LinearLayout>
-
+
     <LinearLayout
         android:id="@+id/LinearLayout03"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
-
+
         <TextView
             android:id="@+id/TextView06"
             android:layout_width="wrap_content"
@@ -90,19 +136,24 @@
             android:layout_marginRight="5dip"
             android:text="Last move [m]"
             android:textSize="20dip" />
-
+
         <TextView
             android:id="@+id/TextView05"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="no move yet"
             android:textSize="20dip" />
-
     </LinearLayout>
 
     <WebView
         android:id="@+id/webView1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="197dp" />
 
-</LinearLayout> 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send sms now" />
+
+</LinearLayout>
